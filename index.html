@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polite Nudge Paradox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Freelance payment follow-up demo</p>
+        <h1>The Polite Nudge Paradox</h1>
+        <p class="lede">
+          A tiny escalation engine that automates the awkward bits: gentle reminder,
+          firmer follow-up, and the "we are escalating this" message when payment
+          keeps drifting.
+        </p>
+
+        <div class="cta-row">
+          <button id="run-btn" class="primary">Run escalation check</button>
+          <button id="seed-btn" class="secondary">Reset demo data</button>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel inbox">
+          <div class="panel-head">
+            <h2>Invoices</h2>
+            <span id="summary-pill" class="pill">3 active</span>
+          </div>
+          <div id="invoice-list" class="invoice-list"></div>
+        </article>
+
+        <article class="panel timeline">
+          <div class="panel-head">
+            <h2>Escalation path</h2>
+            <span class="pill subtle">Automated triggers</span>
+          </div>
+          <ol class="steps">
+            <li>
+              <strong>Day 3</strong>
+              <span>Polite nudge with a clear payment link.</span>
+            </li>
+            <li>
+              <strong>Day 7</strong>
+              <span>Firm reminder with a due date and next steps.</span>
+            </li>
+            <li>
+              <strong>Day 14</strong>
+              <span>Escalation notice that pauses further work.</span>
+            </li>
+            <li>
+              <strong>Day 21</strong>
+              <span>Final notice, ready for legal review.</span>
+            </li>
+          </ol>
+        </article>
+      </section>
+
+      <section class="panel log">
+        <div class="panel-head">
+          <h2>Activity feed</h2>
+          <span class="pill subtle">Live simulation</span>
+        </div>
+        <div id="log" class="log-list"></div>
+      </section>
+    </main>
+
+    <template id="invoice-template">
+      <article class="invoice-card">
+        <div class="invoice-top">
+          <div>
+            <h3></h3>
+            <p class="meta"></p>
+          </div>
+          <span class="status"></span>
+        </div>
+        <div class="metrics">
+          <div>
+            <span>Amount</span>
+            <strong class="amount"></strong>
+          </div>
+          <div>
+            <span>Days overdue</span>
+            <strong class="overdue"></strong>
+          </div>
+          <div>
+            <span>Next action</span>
+            <strong class="action"></strong>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
